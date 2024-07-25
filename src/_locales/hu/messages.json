@@ -1,0 +1,32 @@
+{
+    "command_MarkTab": {
+        "message": "Színbeállítás"
+    },
+    "color_toolbar": {
+        "message": "alapértelmezett"
+    },
+    "color_blue": {
+        "message": "kék"
+    },
+    "color_turquoise": {
+        "message": "türkiz"
+    },
+    "color_green": {
+        "message": "zöld"
+    },
+    "color_yellow": {
+        "message": "sárga"
+    },
+    "color_orange": {
+        "message": "narancssárga"
+    },
+    "color_red": {
+        "message": "vörös"
+    },
+    "color_pink": {
+        "message": "rózsaszín"
+    },
+    "color_purple": {
+        "message": "lila"
+    }
+}

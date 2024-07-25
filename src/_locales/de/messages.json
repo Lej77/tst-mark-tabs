@@ -1,0 +1,29 @@
+{
+    "color_toolbar": {
+        "message": "Standard"
+    },
+    "color_blue": {
+        "message": "Blau"
+    },
+    "color_turquoise": {
+        "message": "Türkis"
+    },
+    "color_green": {
+        "message": "Grün"
+    },
+    "color_yellow": {
+        "message": "Gelb"
+    },
+    "color_orange": {
+        "message": "Orange"
+    },
+    "color_red": {
+        "message": "Rot"
+    },
+    "color_pink": {
+        "message": "Pink"
+    },
+    "color_purple": {
+        "message": "Lila"
+    }
+}

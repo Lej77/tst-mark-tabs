@@ -1,0 +1,125 @@
+{
+    "extensionName": {
+        "message": "TST Mark Tabs"
+    },
+    "options_openInSeparateTab": {
+        "message": "Open this option page in a separate tab"
+    },
+    "options_section_ContextMenu": {
+        "message": "Context Menu"
+    },
+    "options_section_TreeStyleTab": {
+        "message": "Tree Style Tab"
+    },
+    "options_section_MarkedTabs": {
+        "message": "Marked Tabs"
+    },
+    "options_enabled_header": {
+        "message": "Extension Status:"
+    },
+    "options_enabled_true": {
+        "message": "Enabled"
+    },
+    "options_enabled_false": {
+        "message": "Disabled"
+    },
+    "options_enabled_setTrue": {
+        "message": "Enable"
+    },
+    "options_enabled_setFalse": {
+        "message": "Disable"
+    },
+    "options_contextMenu_setColor_enabled": {
+        "message": "Show \"Set color\" context menu item on Firefox Tabs."
+    },
+    "options_contextMenu_setColor_title": {
+        "message": "Custom label for \"Set color\" context menu item on Firefox Tabs (place a \"&\" symbol before the letter that should be used as the keyboard shortcut) (empty to use default label):"
+    },
+    "options_tst_class_enabled": {
+        "message": "Add a custom CSS class to marked tab elements in Tree Style Tab's sidebar. This class will only be present for marked tabs."
+    },
+    "options_tst_class_name": {
+        "message": "Prefix for the custom classes that is added to tab elements in Tree Style Tab's sidebar:"
+    },
+    "options_tst_customStyle_enabled": {
+        "message": "Apply the custom style template below to Tree Style Tab's sidebar while this extension is active. The template will be duplicated for each color this extensions supports."
+    },
+    "options_tst_customStyle_ClassPlaceholder": {
+        "message": "Replace any occurrences of this string in the style template with a color specific custom CSS class:"
+    },
+    "options_tst_customStyle_ColorPlaceholder": {
+        "message": "Replace any occurrences of this string in the style template with a CSS color value:"
+    },
+    "options_tst_customStyle_ColorAlpha": {
+        "message": "The alpha to use for the injected CSS colors (between 0 and 1):"
+    },
+    "options_tst_previewGeneratedStyle": {
+        "message": "Preview of the CSS style injected into TST (generated from the above template info):"
+    },
+    "options_useSessionStorageForMarkerStatus": {
+        "message": "Store mark status in session data. This will ensure that the data persists between extension restarts. The data is also be saved for recently closed tabs and will be restored if they are reopened."
+    },
+    "options_clearMarkers": {
+        "message": "Unmark all tabs"
+    },
+    "options_clearSessionData": {
+        "message": "Clear session data"
+    },
+    "options_resetSettings": {
+        "message": "Reset Settings"
+    },
+    "options_resetSettings_Prompt": {
+        "message": "Do you want to reset all settings to default values?"
+    },
+    "options_Commands_Title": {
+        "message": "Keyboard shortcuts"
+    },
+    "options_Commands_Info": {
+        "message": "Select one of the text inputs below and then make a keyboard combination such as \"Alt+X\" to bind the keyboard shortcut to the selected text box. You can also press the \"Prompt\" button and manually write down a keyboard shortcut if you prefer."
+    },
+    "options_Commands_ResetButton": {
+        "message": "Reset"
+    },
+    "options_Commands_PromptButton": {
+        "message": "Prompt"
+    },
+    "options_Commands_PromptButton_Description": {
+        "message": "Write text representing a keyboard shortcut. For example \"Alt+X\""
+    },
+    "command_ToggleColor": {
+        "message": "Toggle Color"
+    },
+    "command_ToggleColor_Description": {
+        "message": "This keyboard shortcut will toggle the specified color on or off for the currently selected tabs:"
+    },
+    "command_MarkTab": {
+        "message": "Set color"
+    },
+    "color_toolbar": {
+        "message": "Default"
+    },
+    "color_blue": {
+        "message": "Blue"
+    },
+    "color_turquoise": {
+        "message": "Turquoise"
+    },
+    "color_green": {
+        "message": "Green"
+    },
+    "color_yellow": {
+        "message": "Yellow"
+    },
+    "color_orange": {
+        "message": "Orange"
+    },
+    "color_red": {
+        "message": "Red"
+    },
+    "color_pink": {
+        "message": "Pink"
+    },
+    "color_purple": {
+        "message": "Purple"
+    }
+}

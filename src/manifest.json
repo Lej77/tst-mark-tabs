@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.0",
+  "applications": {
+    "gecko": {
+      "strict_min_version": "77.0",
+      "id": "{dab33964-ee66-494e-a816-b064ca5518c4}"
+    }
+  },
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "sessions",
+    "menus"
+  ],
+  "options_ui": {
+    "page": "options/options.html"
+  },
+  "background": {
+    "page": "background/background.html"
+  },
+  "commands": {
+    "ToggleColor": {
+      "description": "__MSG_command_ToggleColor__"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "command_MarkTab": {
+        "message": "設定顏色"
+    },
+    "color_toolbar": {
+        "message": "預設"
+    },
+    "color_blue": {
+        "message": "藍色"
+    },
+    "color_turquoise": {
+        "message": "青綠色"
+    },
+    "color_green": {
+        "message": "綠色"
+    },
+    "color_yellow": {
+        "message": "黃色"
+    },
+    "color_orange": {
+        "message": "橙色"
+    },
+    "color_red": {
+        "message": "紅色"
+    },
+    "color_pink": {
+        "message": "粉色"
+    },
+    "color_purple": {
+        "message": "紫色"
+    }
+}

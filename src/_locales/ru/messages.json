@@ -1,0 +1,32 @@
+{
+    "command_MarkTab": {
+        "message": "Задать цвет"
+    },
+    "color_toolbar": {
+        "message": "Стандартный"
+    },
+    "color_blue": {
+        "message": "Синий"
+    },
+    "color_turquoise": {
+        "message": "Бирюзовый"
+    },
+    "color_green": {
+        "message": "Зеленый"
+    },
+    "color_yellow": {
+        "message": "Желтый"
+    },
+    "color_orange": {
+        "message": "Оранжевый"
+    },
+    "color_red": {
+        "message": "Красный"
+    },
+    "color_pink": {
+        "message": "Розовый"
+    },
+    "color_purple": {
+        "message": "Фиолетовый"
+    }
+}

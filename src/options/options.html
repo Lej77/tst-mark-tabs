@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="support-dark-theme">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+
+<body>
+  <div>
+    <div id="topLinkToOptionsPageArea">
+        <a id="topLinkToOptionsPage" target="_blank" class="message-options_openInSeparateTab"></a>
+        <br />
+        <br />
+    </div>
+
+    <div id="enabledDisableExtension">
+      <button id="disableExtension" class="message-options_enabled_setFalse"></button>
+      <div id="enabledIndicator"></div>
+      <button id="enabledExtension" class="message-options_enabled_setTrue"></button>
+    </div>
+
+    <div id="contextMenuArea" class="sectionArea">
+      <header class="message-options_section_ContextMenu"></header>
+      <label>
+        <input id="contextMenu_setColor_enabled" type="checkbox">
+        <text class="message-options_contextMenu_setColor_enabled"></text>
+      </label>
+      <br />
+      <br />
+      <div class="requires-contextMenu_setColor_enabled">
+        <label class="message-options_contextMenu_setColor_title"></label>
+        <input id="contextMenu_setColor_title" type="text">
+      </div>
+    </div>
+    <br />
+
+    <div id="commandsArea"></div>
+    <br />
+
+    <div id="tstArea" class="sectionArea">
+      <header class="message-options_section_TreeStyleTab"></header>
+      <label>
+        <input id="tst_class_enabled" type="checkbox">
+        <text class="message-options_tst_class_enabled"></text>
+      </label>
+      <br />
+      <br />
+      <div class="requires-tst_class_enabled">
+        <label class="message-options_tst_class_name"></label>
+        <input id="tst_class_name" type="text">
+      </div>
+      <br />
+      <hr />
+      <br />
+      <label>
+        <input id="tst_customStyle_enabled" type="checkbox">
+        <text class="message-options_tst_customStyle_enabled"></text>
+      </label>
+      <br />
+      <textarea  class="requires-tst_customStyle_enabled" id="tst_customStyle" style="width: 100%;" rows=10></textarea>
+      <br />
+      <br />
+      <div class="requires-tst_customStyle_enabled">
+        <label class="message-options_tst_customStyle_ClassPlaceholder"></label>
+        <input id="tst_customStyle_ClassPlaceholder" type="text">
+      </div>
+      <br />
+      <div class="requires-tst_customStyle_enabled">
+        <label class="message-options_tst_customStyle_ColorPlaceholder"></label>
+        <input id="tst_customStyle_ColorPlaceholder" type="text">
+      </div>
+      <br />
+      <div  class="requires-tst_customStyle_enabled">
+        <label class="message-options_tst_customStyle_ColorAlpha"></label>
+        <input id="tst_customStyle_ColorAlpha" type="number" max="1" min="0" step="0.05">
+      </div>
+      <br />
+      <br />
+      <label class="requires-tst_customStyle_enabled message-options_tst_previewGeneratedStyle"></label>
+      <textarea  class="requires-tst_customStyle_enabled" id="tst_previewGeneratedStyle" readonly style="width: 100%;" rows=20></textarea>
+      <br />
+    </div>
+    <br />
+
+    <div class="sectionArea">
+      <header class="message-options_section_MarkedTabs"></header>
+      <label>
+        <input id="useSessionStorageForMarkerStatus" type="checkbox">
+        <text class="message-options_useSessionStorageForMarkerStatus"></text>
+      </label>
+      <br />
+      <br />
+      <div class="manageData">
+        <button id="clearMarkers" class="message-options_clearMarkers"></button>
+        <button id="clearSessionData" class="message-options_clearSessionData"></button>
+      </div>
+      <br />
+    </div>
+
+    <button id="resetSettingsButton" class="message-options_resetSettings"></button>
+  </div>
+  <script type="module" src="options.js"></script>
+</body>
+
+</html>

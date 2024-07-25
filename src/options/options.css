@@ -1,0 +1,81 @@
+@import "../ui/collapsable.css";
+@import "../ui/requires.css";
+@import "../ui/shortcuts.css";
+@import "../ui/status-indicator.css";
+@import "../ui/utilities.css";
+
+/* The parent page will expand to fit this page's content, but there is a delay so the scrollbar will flash on and off if we don't hide it: */
+:root.embeddedInExtensionPage body {
+    overflow-y: hidden;
+    font-size: 1.2em;
+}
+/* The parent page won't resize to fit the horizontal scrollbar so make sure that is never needed for body by showing the scrollbar for child elements instead. */
+:root.embeddedInExtensionPage body > * {
+    max-width: 100%;
+    overflow: auto;
+}
+
+
+#topLinkToOptionsPage {
+    float: right;
+    padding-right: 1em;
+}
+:root:not(.embeddedInExtensionPage) #topLinkToOptionsPage {
+    display: none;
+}
+
+
+input[type="text"] {
+    width: 100%;
+}
+
+#resetSettingsButton {
+    padding: 10px;
+}
+
+
+#enabledDisableExtension {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+#enabledDisableExtension > *:not(button) {
+    flex: 1 0 auto;
+}
+#enabledDisableExtension button {
+    text-align: center;
+    min-height: 3em;
+    font-size: 1.2em;
+    width: 40%;
+    margin: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.manageData {
+    display: flex;
+    justify-content: space-around;
+}
+.manageData button {
+    padding: 10px;
+}
+
+/*
+select#command_toggleColor {
+    background-color: rgb(var(--selected-color-value));
+}
+*/
+.select-with-image {
+    display: flex;
+    align-items: center;
+}
+.select-with-image img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    flex: 0 1 auto;
+}
+select#command_toggleColor option {
+    background-color: rgba(var(--option-color-value), 0.6);
+}
