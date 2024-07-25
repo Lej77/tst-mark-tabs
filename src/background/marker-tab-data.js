@@ -116,8 +116,21 @@ function getCache() {
             const cache = new TabSessionDataCache({
                 monitoredKeys: [kTAB_DATA_KEY_MARKED],
                 onTabDataChanged: onTabSessionValueChanged,
+                // We set a custom getTabData function so that we can notify TST
+                // to update its classes after we restore mark state from
+                // session data (this ensures restored recently closed tabs get
+                // correctly re-colored):
+                getTabData: async (tabId, key) => {
+                    const value = await TabSessionDataCache.getTabData(tabId, key);
+                    if (value) {
+                        onTabTempValueChanged.fire({ entryId: tabId, key, newValue: value });
+                    }
+                    return value;
+                },
             });
             sessionDataCache = cache;
+            // Previously used to notify TST when we load an old value from the session storage:
+            //
             // cache.onDataChanged.addListener(({ entryId, key, value }) => {
             //     if (useSessionStorage && key) {
             //         const details = { entryId, key };
