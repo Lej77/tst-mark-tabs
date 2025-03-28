@@ -8,6 +8,7 @@ import {
     kCOLORS,
     computeTstStyle,
     getBase64SVGIcon,
+    isColorName,
 } from '../common/common.js';
 
 import {
@@ -208,7 +209,21 @@ async function updateContextMenu() {
     })();
 }
 
+/** Set descriptions for keyboard shortcuts that set a specific color. */
+function setKeyboardDescriptions() {
+    return Promise.all(Array.from(Object.keys(kCOLORS)).map(async (colorName) => {
+        try {
+            const localizedColorName = browser.i18n.getMessage(`color_${colorName}`) || colorName;
+            const description = browser.i18n.getMessage(`command_keyboard_MarkTab`, localizedColorName);
+            await browser.commands.update({ name: `SetColor_${colorName}`, description, });
+        } catch (error) {
+            console.error(`Failed to update description of keyboard shortcut that sets the color ${colorName}:\nError:\n`, error);
+        }
+    }))
+}
+
 (async function () {
+    setKeyboardDescriptions();
 
     // #region Browser Version
 
@@ -279,17 +294,25 @@ async function updateContextMenu() {
             return;
         }
         const colorName = info.menuItemId.slice('color_'.length);
-        if (!Object.keys(kCOLORS).includes(colorName)) {
+        if (!isColorName(colorName)) {
             console.warn(`Clicked on context menu item for invalid color: ` + colorName);
-            return;
+        } else {
+            setTabColor({ tabs, value: colorName });
         }
-        setTabColor({ tabs, value: /** @type {any} */ (colorName) });
     });
 
-    browser.commands.onCommand.addListener(async function (command) {
+    browser.commands.onCommand.addListener(async function (/** @type {string} */ command) {
         if (command == "ToggleColor") {
             const tabs = await getSelectedTabs({ majorBrowserVersion });
             toggleTabColor({ tabs, colorToToggle: settings.command_toggleColor });
+        } else if (command.startsWith('SetColor_')) {
+            const colorName = command.slice('SetColor_'.length);
+            if (!isColorName(colorName)) {
+                console.error(`Clicked on context menu item for invalid color: ` + colorName);
+            } else {
+                const tabs = await getSelectedTabs({ majorBrowserVersion });
+                setTabColor({ tabs, value: colorName });
+            }
         }
     });
     updateContextMenu();

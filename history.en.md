@@ -1,6 +1,8 @@
 # History
 
 - master/HEAD
+- 1.1 (2025-03-28)
+  - Feature: keyboard shortcuts to set each color.
 - 1.0 (2024-07-25)
   - Public release.
   - Change: renamed extension from "Mark Tabs for Tree Style Tabs" to "TST Mark Tabs".

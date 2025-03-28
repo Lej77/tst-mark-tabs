@@ -87,13 +87,25 @@
         "message": "Write text representing a keyboard shortcut. For example \"Alt+X\""
     },
     "command_ToggleColor": {
-        "message": "Toggle Color"
+        "message": "Toggle Color",
+        "description": "Name of keyboard shortcut that toggles a customized color"
     },
     "command_ToggleColor_Description": {
         "message": "This keyboard shortcut will toggle the specified color on or off for the currently selected tabs:"
     },
     "command_MarkTab": {
-        "message": "Set color"
+        "message": "Set color",
+        "description": "Used as default name for the tab context menu."
+    },
+    "command_keyboard_MarkTab": {
+        "message": "Set color - $COLOR$",
+        "description": "Name of keyboard shortcut that sets the specific \"localized\" color.",
+        "placeholders": {
+            "color": {
+                "content": "$1",
+                "example": "Blue"
+            }
+        }
     },
     "color_toolbar": {
         "message": "Default"

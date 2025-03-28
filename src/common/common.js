@@ -256,3 +256,14 @@ export async function getBase64SVGIcon(icon, rgbColor) {
 export function alphaToHex(alpha) {
     return Math.max(0, Math.min(255, Math.round(255 * alpha))).toString(16);
 }
+
+/** Check if a given string represents a valid color name.
+ *
+ * @export
+ * @param {string} name A string that might represent the name of a color.
+ * @return {name is keyof typeof kCOLORS} `true` if name is a valid color name, otherwise `false`.
+ */
+export function isColorName(name) {
+    return name in kCOLORS;
+}
+
