@@ -323,7 +323,7 @@ export class TabSessionDataCache extends SessionDataCache {
      * @param {Object} config Configure the cache.
      * @param {EventSubscriber<[BrowserTab]> | null} [config.onTabCreated] Event for created tabs.
      * @param {EventSubscriber<[number]> | null} [config.onTabRemoved] Event for removed tabs.
-     * @param {null | EventSubscriber<[number]>} [config.onTabAttached] Event for tabs attached to new windows. Used to re-set session data for tabs that are moved between windows.
+     * @param {null | EventSubscriber<[number]>} [config.onTabAttached] Event for tabs attached to new windows. Used to re-set session data for tabs that are moved between windows. Workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=2002643
      * @param {EventSubscriber<[SessionDataChangeInfo]> | null} [config.onTabDataChanged] Event for changed tab storage value.
      * @param {false | null | ((tabId: number, key: string) => string | Object)} [config.getTabData] `null` to get tab data via `browser.sessions.getTabValue`. `false` to don't get data. Otherwise a custom function to get data for a tab provided its id and the data key.
      * @param {string[]} config.monitoredKeys An array of `storageKey` that should be monitored by this cache.
@@ -364,6 +364,8 @@ export class TabSessionDataCache extends SessionDataCache {
     async _onTabAttached(tabId, { newWindowId, newPosition }) {
         let data;
         try {
+            // Workaround for lost session data when moving between windows:
+            // https://bugzilla.mozilla.org/show_bug.cgi?id=2002643
             data = await this.getDataForEntryId(tabId);
             if (!data) return; // closed tab.
             if (Object.keys(data).length === 0) return; // No data.
